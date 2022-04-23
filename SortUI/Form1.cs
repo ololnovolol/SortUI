@@ -3,6 +3,7 @@ using Algorithm;
 using System.Drawing;
 using System.Threading;
 using System.Windows.Forms;
+using Algorithm.Structures;
 using System.Collections.Generic;
 
 namespace SortUI
@@ -172,6 +173,24 @@ namespace SortUI
         {
             var insert = new InsertSort<SortedItem>(items);
             BtnClick(insert);
+        }
+
+        private void ShellSort_Click(object sender, EventArgs e)
+        {
+            var shell = new ShellSort<SortedItem>(items);
+            BtnClick(shell);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var tree = new Tree<SortedItem>(items);
+            BtnClick(tree);
+        }
+
+        private void HeapSortButton_Click(object sender, EventArgs e)
+        {
+            var heap = new Heap<SortedItem>(items);
+            BtnClick(heap);
         }
     }
 }

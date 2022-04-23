@@ -43,6 +43,9 @@
             this.BubleSortButton = new System.Windows.Forms.Button();
             this.CoctailButton = new System.Windows.Forms.Button();
             this.InsertButton = new System.Windows.Forms.Button();
+            this.ShellSort = new System.Windows.Forms.Button();
+            this.TreeSortButton = new System.Windows.Forms.Button();
+            this.HeapSortButton = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -160,9 +163,9 @@
             // 
             // BubleSortButton
             // 
-            this.BubleSortButton.Location = new System.Drawing.Point(0, 272);
+            this.BubleSortButton.Location = new System.Drawing.Point(164, 286);
             this.BubleSortButton.Name = "BubleSortButton";
-            this.BubleSortButton.Size = new System.Drawing.Size(76, 38);
+            this.BubleSortButton.Size = new System.Drawing.Size(76, 53);
             this.BubleSortButton.TabIndex = 0;
             this.BubleSortButton.Text = "Пузырёк";
             this.BubleSortButton.UseVisualStyleBackColor = true;
@@ -170,9 +173,9 @@
             // 
             // CoctailButton
             // 
-            this.CoctailButton.Location = new System.Drawing.Point(82, 272);
+            this.CoctailButton.Location = new System.Drawing.Point(246, 286);
             this.CoctailButton.Name = "CoctailButton";
-            this.CoctailButton.Size = new System.Drawing.Size(76, 38);
+            this.CoctailButton.Size = new System.Drawing.Size(76, 53);
             this.CoctailButton.TabIndex = 12;
             this.CoctailButton.Text = "Шейкер";
             this.CoctailButton.UseVisualStyleBackColor = true;
@@ -180,19 +183,52 @@
             // 
             // InsertButton
             // 
-            this.InsertButton.Location = new System.Drawing.Point(164, 272);
+            this.InsertButton.Location = new System.Drawing.Point(328, 286);
             this.InsertButton.Name = "InsertButton";
-            this.InsertButton.Size = new System.Drawing.Size(76, 38);
+            this.InsertButton.Size = new System.Drawing.Size(76, 53);
             this.InsertButton.TabIndex = 13;
             this.InsertButton.Text = "Вставка";
             this.InsertButton.UseVisualStyleBackColor = true;
             this.InsertButton.Click += new System.EventHandler(this.InsertButton_Click);
+            // 
+            // ShellSort
+            // 
+            this.ShellSort.Location = new System.Drawing.Point(164, 355);
+            this.ShellSort.Name = "ShellSort";
+            this.ShellSort.Size = new System.Drawing.Size(76, 53);
+            this.ShellSort.TabIndex = 14;
+            this.ShellSort.Text = "сортировка\r\nШелла";
+            this.ShellSort.UseVisualStyleBackColor = true;
+            this.ShellSort.Click += new System.EventHandler(this.ShellSort_Click);
+            // 
+            // TreeSortButton
+            // 
+            this.TreeSortButton.Location = new System.Drawing.Point(246, 355);
+            this.TreeSortButton.Name = "TreeSortButton";
+            this.TreeSortButton.Size = new System.Drawing.Size(76, 53);
+            this.TreeSortButton.TabIndex = 15;
+            this.TreeSortButton.Text = "Дерево\r\n(binary)";
+            this.TreeSortButton.UseVisualStyleBackColor = true;
+            this.TreeSortButton.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // HeapSortButton
+            // 
+            this.HeapSortButton.Location = new System.Drawing.Point(328, 355);
+            this.HeapSortButton.Name = "HeapSortButton";
+            this.HeapSortButton.Size = new System.Drawing.Size(76, 53);
+            this.HeapSortButton.TabIndex = 16;
+            this.HeapSortButton.Text = "Куча";
+            this.HeapSortButton.UseVisualStyleBackColor = true;
+            this.HeapSortButton.Click += new System.EventHandler(this.HeapSortButton_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(673, 483);
+            this.Controls.Add(this.HeapSortButton);
+            this.Controls.Add(this.TreeSortButton);
+            this.Controls.Add(this.ShellSort);
             this.Controls.Add(this.InsertButton);
             this.Controls.Add(this.CoctailButton);
             this.Controls.Add(this.BubleSortButton);
@@ -230,6 +266,9 @@
         private System.Windows.Forms.Button BubleSortButton;
         private System.Windows.Forms.Button CoctailButton;
         private System.Windows.Forms.Button InsertButton;
+        private System.Windows.Forms.Button ShellSort;
+        private System.Windows.Forms.Button TreeSortButton;
+        private System.Windows.Forms.Button HeapSortButton;
     }
 }
 

@@ -2,6 +2,7 @@
 using Algorithm;
 using System.Linq;
 using System.Text;
+using Algorithm.Structures;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -19,7 +20,7 @@ namespace AlgorithmTests
         public void Init()
         {
             Items.Clear();
-            for (int i = 0; i < 2500; i++)
+            for (int i = 0; i < 10000; i++)
             {
                 Items.Add(rnd.Next(0, 99));
             }
@@ -79,6 +80,56 @@ namespace AlgorithmTests
             for (int i = 0; i < Items.Count; i++)
             {
                 Assert.AreEqual(Sorted[i], insert.Items[i]);
+            }
+        }
+
+        [TestMethod()]
+        public void ShellSort()
+        {
+            //arange
+            var shell = new ShellSort<int>();
+
+            shell.Items.AddRange(Items);
+
+            //act
+            shell.Sort();
+
+            //assert
+            for (int i = 0; i < Items.Count; i++)
+            {
+                Assert.AreEqual(Sorted[i], shell.Items[i]);
+            }
+        }
+
+        [TestMethod()]
+        public void TreeSort()
+        {
+            //arange
+            var tree = new Tree<int>(Items);
+
+            //act
+            tree.Sort();
+
+            //assert
+            for (int i = 0; i < Items.Count; i++)
+            {
+                Assert.AreEqual(Sorted[i], tree.Items[i]);
+            }
+        }
+
+        [TestMethod()]
+        public void HeapSort()
+        {
+            //arange
+            var heap = new Tree<int>(Items);
+
+            //act
+            heap.Sort();
+
+            //assert
+            for (int i = 0; i < Items.Count; i++)
+            {
+                Assert.AreEqual(Sorted[i], heap.Items[i]);
             }
         }
 

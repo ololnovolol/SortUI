@@ -17,14 +17,12 @@ namespace Algorithm
 
         public event EventHandler<Tuple<int, T>> SetEvent;
 
+
         public AlgorithmBase(IEnumerable<T> items)
         {
             Items.AddRange(items);
         }
-        public AlgorithmBase()
-        {
-           
-        }
+        public AlgorithmBase() { }
 
 
         protected void Swop(int positionA, int positionB)
