@@ -46,6 +46,9 @@
             this.ShellSort = new System.Windows.Forms.Button();
             this.TreeSortButton = new System.Windows.Forms.Button();
             this.HeapSortButton = new System.Windows.Forms.Button();
+            this.SelectedSortButton = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -163,7 +166,7 @@
             // 
             // BubleSortButton
             // 
-            this.BubleSortButton.Location = new System.Drawing.Point(164, 286);
+            this.BubleSortButton.Location = new System.Drawing.Point(63, 284);
             this.BubleSortButton.Name = "BubleSortButton";
             this.BubleSortButton.Size = new System.Drawing.Size(76, 53);
             this.BubleSortButton.TabIndex = 0;
@@ -173,7 +176,7 @@
             // 
             // CoctailButton
             // 
-            this.CoctailButton.Location = new System.Drawing.Point(246, 286);
+            this.CoctailButton.Location = new System.Drawing.Point(311, 284);
             this.CoctailButton.Name = "CoctailButton";
             this.CoctailButton.Size = new System.Drawing.Size(76, 53);
             this.CoctailButton.TabIndex = 12;
@@ -183,7 +186,7 @@
             // 
             // InsertButton
             // 
-            this.InsertButton.Location = new System.Drawing.Point(328, 286);
+            this.InsertButton.Location = new System.Drawing.Point(145, 284);
             this.InsertButton.Name = "InsertButton";
             this.InsertButton.Size = new System.Drawing.Size(76, 53);
             this.InsertButton.TabIndex = 13;
@@ -193,7 +196,7 @@
             // 
             // ShellSort
             // 
-            this.ShellSort.Location = new System.Drawing.Point(164, 355);
+            this.ShellSort.Location = new System.Drawing.Point(63, 353);
             this.ShellSort.Name = "ShellSort";
             this.ShellSort.Size = new System.Drawing.Size(76, 53);
             this.ShellSort.TabIndex = 14;
@@ -203,17 +206,17 @@
             // 
             // TreeSortButton
             // 
-            this.TreeSortButton.Location = new System.Drawing.Point(246, 355);
+            this.TreeSortButton.Location = new System.Drawing.Point(145, 353);
             this.TreeSortButton.Name = "TreeSortButton";
             this.TreeSortButton.Size = new System.Drawing.Size(76, 53);
             this.TreeSortButton.TabIndex = 15;
             this.TreeSortButton.Text = "Дерево\r\n(binary)";
             this.TreeSortButton.UseVisualStyleBackColor = true;
-            this.TreeSortButton.Click += new System.EventHandler(this.button1_Click);
+            this.TreeSortButton.Click += new System.EventHandler(this.TreeButton);
             // 
             // HeapSortButton
             // 
-            this.HeapSortButton.Location = new System.Drawing.Point(328, 355);
+            this.HeapSortButton.Location = new System.Drawing.Point(227, 353);
             this.HeapSortButton.Name = "HeapSortButton";
             this.HeapSortButton.Size = new System.Drawing.Size(76, 53);
             this.HeapSortButton.TabIndex = 16;
@@ -221,11 +224,43 @@
             this.HeapSortButton.UseVisualStyleBackColor = true;
             this.HeapSortButton.Click += new System.EventHandler(this.HeapSortButton_Click);
             // 
+            // SelectedSortButton
+            // 
+            this.SelectedSortButton.Location = new System.Drawing.Point(227, 284);
+            this.SelectedSortButton.Name = "SelectedSortButton";
+            this.SelectedSortButton.Size = new System.Drawing.Size(76, 53);
+            this.SelectedSortButton.TabIndex = 17;
+            this.SelectedSortButton.Text = "Выбором";
+            this.SelectedSortButton.UseVisualStyleBackColor = true;
+            this.SelectedSortButton.Click += new System.EventHandler(this.SelectedSortButto);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(12, 304);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(45, 13);
+            this.label3.TabIndex = 18;
+            this.label3.Text = "O  (n^2)";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(12, 373);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(50, 13);
+            this.label4.TabIndex = 19;
+            this.label4.Text = "O  (n log)";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(673, 483);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.SelectedSortButton);
             this.Controls.Add(this.HeapSortButton);
             this.Controls.Add(this.TreeSortButton);
             this.Controls.Add(this.ShellSort);
@@ -269,6 +304,9 @@
         private System.Windows.Forms.Button ShellSort;
         private System.Windows.Forms.Button TreeSortButton;
         private System.Windows.Forms.Button HeapSortButton;
+        private System.Windows.Forms.Button SelectedSortButton;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }
 

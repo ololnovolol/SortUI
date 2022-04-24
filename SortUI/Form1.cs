@@ -181,7 +181,7 @@ namespace SortUI
             BtnClick(shell);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void TreeButton(object sender, EventArgs e)
         {
             var tree = new Tree<SortedItem>(items);
             BtnClick(tree);
@@ -191,6 +191,17 @@ namespace SortUI
         {
             var heap = new Heap<SortedItem>(items);
             BtnClick(heap);
+        }
+
+        private void SelectedSortButto(object sender, EventArgs e)
+        {
+            var select = new SelectionSort<SortedItem>(items);
+            BtnClick(select);
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

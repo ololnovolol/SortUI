@@ -20,7 +20,7 @@ namespace AlgorithmTests
         public void Init()
         {
             Items.Clear();
-            for (int i = 0; i < 10000; i++)
+            for (int i = 0; i < 3500; i++)
             {
                 Items.Add(rnd.Next(0, 99));
             }
@@ -44,6 +44,24 @@ namespace AlgorithmTests
             for (int i = 0; i < Items.Count; i++)
             {
                 Assert.AreEqual(Sorted[i], bubble.Items[i]);
+            }
+        }
+
+        [TestMethod()]
+        public void SelectionTest()
+        {
+            //arange
+            var select = new SelectionSort<int>();
+
+            select.Items.AddRange(Items);
+
+            //act
+            select.Sort();
+
+            //assert
+            for (int i = 0; i < Items.Count; i++)
+            {
+                Assert.AreEqual(Sorted[i], select.Items[i]);
             }
         }
 
