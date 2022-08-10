@@ -49,6 +49,11 @@
             this.SelectedSortButton = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.GnomeSortButton = new System.Windows.Forms.Button();
+            this.MargeSBtn = new System.Windows.Forms.Button();
+            this.LsdBtn = new System.Windows.Forms.Button();
+            this.MsdDtn = new System.Windows.Forms.Button();
+            this.QuickBtn = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -166,7 +171,7 @@
             // 
             // BubleSortButton
             // 
-            this.BubleSortButton.Location = new System.Drawing.Point(63, 284);
+            this.BubleSortButton.Location = new System.Drawing.Point(100, 304);
             this.BubleSortButton.Name = "BubleSortButton";
             this.BubleSortButton.Size = new System.Drawing.Size(76, 53);
             this.BubleSortButton.TabIndex = 0;
@@ -176,7 +181,7 @@
             // 
             // CoctailButton
             // 
-            this.CoctailButton.Location = new System.Drawing.Point(311, 284);
+            this.CoctailButton.Location = new System.Drawing.Point(182, 304);
             this.CoctailButton.Name = "CoctailButton";
             this.CoctailButton.Size = new System.Drawing.Size(76, 53);
             this.CoctailButton.TabIndex = 12;
@@ -186,7 +191,7 @@
             // 
             // InsertButton
             // 
-            this.InsertButton.Location = new System.Drawing.Point(145, 284);
+            this.InsertButton.Location = new System.Drawing.Point(264, 304);
             this.InsertButton.Name = "InsertButton";
             this.InsertButton.Size = new System.Drawing.Size(76, 53);
             this.InsertButton.TabIndex = 13;
@@ -196,17 +201,18 @@
             // 
             // ShellSort
             // 
-            this.ShellSort.Location = new System.Drawing.Point(63, 353);
+            this.ShellSort.BackColor = System.Drawing.SystemColors.Control;
+            this.ShellSort.Location = new System.Drawing.Point(100, 373);
             this.ShellSort.Name = "ShellSort";
             this.ShellSort.Size = new System.Drawing.Size(76, 53);
             this.ShellSort.TabIndex = 14;
             this.ShellSort.Text = "сортировка\r\nШелла";
-            this.ShellSort.UseVisualStyleBackColor = true;
+            this.ShellSort.UseVisualStyleBackColor = false;
             this.ShellSort.Click += new System.EventHandler(this.ShellSort_Click);
             // 
             // TreeSortButton
             // 
-            this.TreeSortButton.Location = new System.Drawing.Point(145, 353);
+            this.TreeSortButton.Location = new System.Drawing.Point(346, 373);
             this.TreeSortButton.Name = "TreeSortButton";
             this.TreeSortButton.Size = new System.Drawing.Size(76, 53);
             this.TreeSortButton.TabIndex = 15;
@@ -216,7 +222,7 @@
             // 
             // HeapSortButton
             // 
-            this.HeapSortButton.Location = new System.Drawing.Point(227, 353);
+            this.HeapSortButton.Location = new System.Drawing.Point(510, 304);
             this.HeapSortButton.Name = "HeapSortButton";
             this.HeapSortButton.Size = new System.Drawing.Size(76, 53);
             this.HeapSortButton.TabIndex = 16;
@@ -226,7 +232,7 @@
             // 
             // SelectedSortButton
             // 
-            this.SelectedSortButton.Location = new System.Drawing.Point(227, 284);
+            this.SelectedSortButton.Location = new System.Drawing.Point(346, 304);
             this.SelectedSortButton.Name = "SelectedSortButton";
             this.SelectedSortButton.Size = new System.Drawing.Size(76, 53);
             this.SelectedSortButton.TabIndex = 17;
@@ -237,7 +243,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 304);
+            this.label3.Location = new System.Drawing.Point(49, 324);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(45, 13);
             this.label3.TabIndex = 18;
@@ -247,17 +253,72 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 373);
+            this.label4.Location = new System.Drawing.Point(49, 393);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(50, 13);
             this.label4.TabIndex = 19;
             this.label4.Text = "O  (n log)";
+            // 
+            // GnomeSortButton
+            // 
+            this.GnomeSortButton.Location = new System.Drawing.Point(428, 304);
+            this.GnomeSortButton.Name = "GnomeSortButton";
+            this.GnomeSortButton.Size = new System.Drawing.Size(76, 53);
+            this.GnomeSortButton.TabIndex = 20;
+            this.GnomeSortButton.Text = "Гном";
+            this.GnomeSortButton.UseVisualStyleBackColor = true;
+            this.GnomeSortButton.Click += new System.EventHandler(this.GnomeSortButton_Click);
+            // 
+            // MargeSBtn
+            // 
+            this.MargeSBtn.Location = new System.Drawing.Point(264, 373);
+            this.MargeSBtn.Name = "MargeSBtn";
+            this.MargeSBtn.Size = new System.Drawing.Size(76, 53);
+            this.MargeSBtn.TabIndex = 21;
+            this.MargeSBtn.Text = "Marge";
+            this.MargeSBtn.UseVisualStyleBackColor = true;
+            this.MargeSBtn.Click += new System.EventHandler(this.MargeSBtn_Click);
+            // 
+            // LsdBtn
+            // 
+            this.LsdBtn.Location = new System.Drawing.Point(428, 373);
+            this.LsdBtn.Name = "LsdBtn";
+            this.LsdBtn.Size = new System.Drawing.Size(76, 53);
+            this.LsdBtn.TabIndex = 22;
+            this.LsdBtn.Text = "Lsd";
+            this.LsdBtn.UseVisualStyleBackColor = true;
+            this.LsdBtn.Click += new System.EventHandler(this.LsdBtn_Click);
+            // 
+            // MsdDtn
+            // 
+            this.MsdDtn.Location = new System.Drawing.Point(510, 373);
+            this.MsdDtn.Name = "MsdDtn";
+            this.MsdDtn.Size = new System.Drawing.Size(76, 53);
+            this.MsdDtn.TabIndex = 23;
+            this.MsdDtn.Text = "Msd";
+            this.MsdDtn.UseVisualStyleBackColor = true;
+            this.MsdDtn.Click += new System.EventHandler(this.MsdDtn_Click);
+            // 
+            // QuickBtn
+            // 
+            this.QuickBtn.Location = new System.Drawing.Point(182, 373);
+            this.QuickBtn.Name = "QuickBtn";
+            this.QuickBtn.Size = new System.Drawing.Size(76, 53);
+            this.QuickBtn.TabIndex = 24;
+            this.QuickBtn.Text = "Быстрая";
+            this.QuickBtn.UseVisualStyleBackColor = true;
+            this.QuickBtn.Click += new System.EventHandler(this.QuickBtn_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(673, 483);
+            this.Controls.Add(this.QuickBtn);
+            this.Controls.Add(this.MsdDtn);
+            this.Controls.Add(this.LsdBtn);
+            this.Controls.Add(this.MargeSBtn);
+            this.Controls.Add(this.GnomeSortButton);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.SelectedSortButton);
@@ -307,6 +368,11 @@
         private System.Windows.Forms.Button SelectedSortButton;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button GnomeSortButton;
+        private System.Windows.Forms.Button MargeSBtn;
+        private System.Windows.Forms.Button LsdBtn;
+        private System.Windows.Forms.Button MsdDtn;
+        private System.Windows.Forms.Button QuickBtn;
     }
 }
 

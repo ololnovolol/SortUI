@@ -11,7 +11,7 @@ namespace SortUI
     public partial class Form1 : Form
     {
         List<SortedItem> items = new List<SortedItem>();
-        private const int sleep = 50;
+        private const int sleep = 75;
         public Form1()
         {
             InitializeComponent();
@@ -202,6 +202,36 @@ namespace SortUI
         private void label3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void GnomeSortButton_Click(object sender, EventArgs e)
+        {
+            var gnom = new GnomeSort<SortedItem>(items);
+            BtnClick(gnom);
+        }
+
+        private void MargeSBtn_Click(object sender, EventArgs e)
+        {
+            var marge = new MergeSort<SortedItem>(items);
+            BtnClick(marge);
+        }
+
+        private void LsdBtn_Click(object sender, EventArgs e)
+        {
+            var lsd = new LsdSort<SortedItem>(items);
+            BtnClick(lsd);
+        }
+
+        private void MsdDtn_Click(object sender, EventArgs e)
+        {
+            var msd = new MsdSort<SortedItem>(items);
+            BtnClick(msd);
+        }
+
+        private void QuickBtn_Click(object sender, EventArgs e)
+        {
+            var quick = new QuickSort<SortedItem>(items);
+            BtnClick(quick);
         }
     }
 }

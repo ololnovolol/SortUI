@@ -66,6 +66,24 @@ namespace AlgorithmTests
         }
 
         [TestMethod()]
+        public void GnomeSortTest()
+        {
+            //arange
+            var gnome = new GnomeSort<int>();
+
+            gnome.Items.AddRange(Items);
+
+            //act
+            gnome.Sort();
+
+            //assert
+            for (int i = 0; i < Items.Count; i++)
+            {
+                Assert.AreEqual(Sorted[i], gnome.Items[i]);
+            }
+        }
+
+        [TestMethod()]
         public void CoctailTest()
         {
             //arange
@@ -148,6 +166,76 @@ namespace AlgorithmTests
             for (int i = 0; i < Items.Count; i++)
             {
                 Assert.AreEqual(Sorted[i], heap.Items[i]);
+            }
+        }
+
+        [TestMethod()]
+        public void LsdSortTest()
+        {
+            //arange
+            var lsd = new LsdSort<int>();
+
+            lsd.Items.AddRange(Items);
+
+            //act
+            lsd.Sort();
+
+            //assert
+            for (int i = 0; i < Items.Count; i++)
+            {
+                Assert.AreEqual(Sorted[i], lsd.Items[i]);
+            }
+        }
+
+        [TestMethod()]
+        public void MsdSortTest()
+        {
+            //arange
+            var msd = new MsdSort<int>();
+
+            msd.Items.AddRange(Items);
+
+            //act
+            msd.Sort();
+
+            //assert
+            for (int i = 0; i < Items.Count; i++)
+            {
+                Assert.AreEqual(Sorted[i], msd.Items[i]);
+            }
+        }
+
+        [TestMethod()]
+        public void MergeSortTest()
+        {
+            //arange
+            var merge = new MergeSort<int>();
+
+            merge.Items.AddRange(Items);
+            //act
+            merge.Sort();
+
+            //assert
+            for (int i = 0; i < Items.Count; i++)
+            {
+                Assert.AreEqual(Sorted[i], merge.Items[i]);
+            }
+        }
+
+        [TestMethod()]
+        public void QuickSortTest()
+        {
+            //arange
+            var quick = new QuickSort<int>();
+
+            quick.Items.AddRange(Items);
+            //act
+            quick.Sort();
+
+            //assert
+            for (int i = 0; i < Items.Count; i++)
+            {
+                Assert.AreEqual(Sorted[i], quick.Items[i]);
             }
         }
 
